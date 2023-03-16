@@ -13,6 +13,8 @@ router.post('/', (req, res) => {
 
         const travel_time = distance / travel_speed;
 
+        res.setHeader('Access-Control-Allow-Origin', '*');
+
         res.status(200).send({
             message: travel_time,
             success: true
